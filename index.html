@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofía Galíndez - Portfolio Web</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        base: '#FDFBF7',
+                        surface: '#FFFFFF',
+                        textMain: '#2D2727',
+                        textMuted: '#5A5252',
+                        textInverse: '#FBF1EC',
+                        accentPink: '#F8E8EE',
+                        accentLilac: '#EFE9F4',
+                        accentPeach: '#FDECE4',
+                        borderSoft: '#F0EBE1',
+                        /* Tonos saturados de la misma familia, para dar contraste sin romper la armonía */
+                        rose: '#E2799F',
+                        lilacBold: '#9B7FC7',
+                        peachBold: '#E8965E',
+                        borderRose: '#E9AFC7',
+                        borderLilac: '#C3AEE0',
+                        borderPeach: '#F0BD92',
+                        /* Tono profundo para los bloques de alto contraste */
+                        plum: '#341F30',
+                        plumSoft: '#4F2E48'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['"Fraunces"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-base/90 backdrop-blur-md z-50 border-b-2 border-dashed border-borderRose/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="font-display font-bold text-xl tracking-tight bg-gradient-to-r from-rose via-lilacBold to-peachBold bg-clip-text text-transparent">S.G.<span class="text-textMuted font-sans font-normal text-sm">.dev</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#sobre-mi" class="nav-link text-sm font-medium">Sobre mí</a>
+                    <a href="#formacion" class="nav-link text-sm font-medium">Formación</a>
+                    <a href="#proyectos" class="nav-link text-sm font-medium">Proyectos</a>
+                    <a href="#contacto" class="nav-link text-sm font-medium">Contacto</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-button" class="text-textMain focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-surface border-b-2 border-dashed border-borderRose/60">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#sobre-mi" class="block px-3 py-2 rounded-md text-base font-medium text-textMain hover:bg-accentPink">Sobre mí</a>
+                <a href="#formacion" class="block px-3 py-2 rounded-md text-base font-medium text-textMain hover:bg-accentPink">Formación</a>
+                <a href="#proyectos" class="block px-3 py-2 rounded-md text-base font-medium text-textMain hover:bg-accentPink">Proyectos</a>
+                <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-textMain hover:bg-accentPink">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between hero-anim min-h-[85vh] relative overflow-hidden">
+        <div class="absolute top-1/3 left-10 w-72 h-72 bg-rose/25 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-10 right-0 w-80 h-80 bg-lilacBold/20 rounded-full blur-3xl -z-10"></div>
+        <div class="md:w-1/2 mb-10 md:mb-0 z-10 gsap-reveal">
+            <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-rose mb-4">
+                <span class="w-1.5 h-1.5 rounded-full bg-rose"></span> Portfolio 2026
+            </span>
+            <h1 class="font-display text-4xl md:text-6xl font-semibold mb-4 leading-tight tracking-tight">Sofía Galíndez</h1>
+            <h2 class="text-xl md:text-2xl text-textMuted mb-6 font-medium">Estudiante Técnica en Computación</h2>
+            <p class="text-textMuted mb-8 max-w-md leading-relaxed">
+                Apasionada por la tecnología, el diseño y la creación de soluciones digitales. Te invito a conocer más sobre mi perfil y proyectos.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#proyectos" class="bg-textMain text-white px-8 py-3.5 rounded-full font-medium hover:bg-textMuted transition-colors duration-300 shadow-sm">
+                    Ver Proyectos
+                </a>
+                <a href="#contacto" class="bg-white border-dashed-cute border-borderRose text-textMain px-8 py-3.5 rounded-full font-medium hover:bg-accentPink/40 transition-colors duration-300">
+                    Hablemos
+                </a>
+            </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center md:justify-end z-10 gsap-reveal">
+            <div class="relative corner-dot">
+                <div class="w-64 h-64 md:w-80 md:h-80 bg-accentLilac rounded-[38px] shadow-sm border-dashed-cute border-rose/70 flex items-center justify-center overflow-hidden rotate-2 hover:rotate-0 transition-transform duration-500">
+                    <img src="./assets/foto.jpeg" alt="Fotografía de Sofía Galíndez" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section id="sobre-mi" class="py-24 bg-surface border-y border-borderSoft">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-center gap-3 mb-3 text-rose">
+                <span class="stitch-divider w-10"></span>
+                <h3 class="text-xs uppercase tracking-widest font-bold text-textMuted">Perfil</h3>
+                <span class="stitch-divider w-10"></span>
+            </div>
+            <h3 class="font-display text-3xl font-semibold mb-12 text-center tracking-tight">Un poco sobre mí</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Tarjeta 1 (Quién Soy) -->
+                <div class="item-bento gsap-reveal bg-base p-8 rounded-3xl border-dashed-cute border-borderRose card-hover flex flex-col h-full justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-rose/20 flex items-center justify-center text-rose mb-6"><i class="fa-solid fa-user-astronaut"></i></div>
+                        <h4 class="font-bold text-xl mb-3">Quién Soy</h4>
+                        <p class="text-sm text-textMuted leading-relaxed">Estudiante técnica en computación con conocimientos en programación estructurada y maquetación visual. Me caracterizo por ser detallista y por buscar siempre la armonía entre el código bien hecho y una interfaz atractiva.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 (Habilidades Blandas) -->
+                <div class="item-bento gsap-reveal bg-base p-8 rounded-3xl border-dashed-cute border-borderLilac card-hover flex flex-col h-full justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-lilacBold/20 flex items-center justify-center text-lilacBold mb-6"><i class="fa-solid fa-brain"></i></div>
+                        <h4 class="font-bold text-xl mb-3">Habilidades Blandas</h4>
+                        <ul class="text-sm text-textMuted space-y-3 font-medium">
+                            <li class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-lilacBold"></span> Escucha activa</li>
+                            <li class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-lilacBold"></span> Proactividad</li>
+                            <li class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-lilacBold"></span> Trabajo en equipo</li>
+                            <li class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-lilacBold"></span> Pensamiento crítico</li>
+                            <li class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-lilacBold"></span> Creatividad</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 (Idiomas) -->
+                <div class="item-bento gsap-reveal bg-base p-8 rounded-3xl border-dashed-cute border-borderPeach card-hover flex flex-col h-full justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-peachBold/20 flex items-center justify-center text-peachBold mb-6"><i class="fa-solid fa-globe"></i></div>
+                        <h4 class="font-bold text-xl mb-3">Idiomas</h4>
+                        <p class="text-sm text-textMuted leading-relaxed"><span class="font-semibold text-textMain">Inglés - Nivel B2:</span> Capacidad consolidada para mantener conversaciones fluidas y comprensión lectora de documentación técnica avanzada sin complicaciones.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Formación Académica -->
+    <section id="formacion" class="py-24 deep-block dots-on-dark relative overflow-hidden">
+        <div class="absolute -top-10 -right-10 w-72 h-72 bg-rose/20 rounded-full blur-3xl -z-0"></div>
+        <div class="max-w-4xl mx-auto px-4 relative">
+            <div class="flex items-center justify-center gap-3 mb-3 text-rose">
+                <span class="stitch-divider w-10"></span>
+                <h3 class="text-xs uppercase tracking-widest font-bold text-rose/90">Trayectoria</h3>
+                <span class="stitch-divider w-10"></span>
+            </div>
+            <h3 class="font-display text-3xl font-semibold mb-16 text-center tracking-tight text-textInverse">Formación Académica</h3>
+            
+            <div class="relative border-l-2 border-dashed border-textInverse/30 ml-4 md:ml-32 space-y-12 pb-4">
+                
+                <div class="relative pl-8 timeline-card gsap-reveal">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-plum border-2 border-rose z-10"></div>
+                    <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border-dashed-cute border-textInverse/25 shadow-sm card-hover max-w-2xl">
+                        <span class="inline-block gradient-bloom-btn text-white text-xs font-bold px-2.5 py-1 rounded-md mb-2">2021 - En curso</span>
+                        <h4 class="font-bold text-xl text-textInverse">Título de Técnico en Computación</h4>
+                        <p class="text-sm text-textInverse/70 mt-1">Escuela Técnica N° 35 - Ing. Eduardo Latzina</p>
+                        <p class="text-xs text-textInverse/55 mt-2">Formación técnica enfocada en lógica de programación, bases de datos, redes y diseño de sistemas complejos de software.</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 timeline-card gsap-reveal">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-plum border-2 border-lilacBold z-10"></div>
+                    <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border-dashed-cute border-textInverse/25 shadow-sm card-hover max-w-2xl">
+                        <span class="inline-block bg-lilacBold/80 text-white text-xs font-bold px-2.5 py-1 rounded-md mb-2">2016 - 2022</span>
+                        <h4 class="font-bold text-xl text-textInverse">Estudios Avanzados de Idioma Inglés</h4>
+                        <p class="text-sm text-textInverse/70 mt-1">CECIE 18 de 18</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 timeline-card gsap-reveal">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-plum border-2 border-peachBold z-10"></div>
+                    <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border-dashed-cute border-textInverse/25 shadow-sm card-hover max-w-2xl">
+                        <span class="inline-block bg-peachBold/80 text-white text-xs font-bold px-2.5 py-1 rounded-md mb-2">2023</span>
+                        <h4 class="font-bold text-xl text-textInverse">Curso Técnico AutoCAD y Bases de SolidWorks</h4>
+                        <p class="text-sm text-textInverse/70 mt-1">Escuela Técnica N° 35 Ing. Eduardo Latzina</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia Laboral -->
+    <section class="py-24 bg-surface border-y-2 border-dashed border-borderRose/50">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="flex items-center justify-center gap-3 mb-3 text-peachBold">
+                <span class="stitch-divider w-10"></span>
+                <h3 class="text-xs uppercase tracking-widest font-bold text-textMuted">Recorrido</h3>
+                <span class="stitch-divider w-10"></span>
+            </div>
+            <h3 class="font-display text-3xl font-semibold mb-12 text-center tracking-tight">Experiencia Laboral</h3>
+            <div class="experience-card gsap-reveal bg-base p-8 rounded-3xl border-dashed-cute border-borderPeach card-hover max-w-3xl mx-auto">
+                <div class="flex flex-wrap justify-between items-start gap-2 mb-4">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-peachBold">2025 - 2026</span>
+                        <h4 class="font-bold text-2xl mt-1">Diseñadora de Contenido Digital Freelance</h4>
+                    </div>
+                </div>
+                <ul class="text-sm text-textMuted space-y-3">
+                    <li class="flex items-start gap-2">
+                        <span class="mt-1 text-peachBold text-xs"><i class="fa-solid fa-check"></i></span>
+                        <span>Creación y maquetación de piezas publicitarias (posts, flyers) personalizadas para clientes de diversos rubros comerciales.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="mt-1 text-peachBold text-xs"><i class="fa-solid fa-check"></i></span>
+                        <span>Adaptación estratégica de contenido digital a redes sociales según las guías estéticas de cada cliente.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="mt-1 text-peachBold text-xs"><i class="fa-solid fa-check"></i></span>
+                        <span>Implementación sistemática de mejoras basadas en el feedback visual, logrando optimizar la interacción.</span>
+                    </li>
+                    <li class="pt-4 border-t-2 border-dashed border-borderPeach mt-4">
+                        <span class="font-semibold text-textMain block mb-2 text-xs uppercase tracking-wider">Referencias Comprobables:</span>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs bg-white p-3 rounded-xl border-dashed-cute border-borderPeach">
+                            <p class="font-medium text-textMain flex items-center gap-1.5"><i class="fa-solid fa-prescription-bottle-medical text-peachBold"></i> Droguería Baltari</p>
+                            <p class="font-medium text-textMain flex items-center gap-1.5">
+                                <i class="fa-solid fa-music text-peachBold"></i> Coro Sonoras 
+                                (<a href="https://www.instagram.com/sonoras.coro/" target="_blank" class="text-textMain underline hover:opacity-70 font-semibold">@sonoras.coro</a>)
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades Técnicas -->
+    <section class="py-20 bg-base border-b-2 border-dashed border-borderLilac/60 relative overflow-hidden">
+        <div class="absolute top-0 right-1/4 w-64 h-64 bg-lilacBold/15 rounded-full blur-3xl -z-0"></div>
+        <div class="max-w-5xl mx-auto px-4 text-center relative">
+            <div class="flex items-center justify-center gap-3 mb-3 text-lilacBold">
+                <span class="stitch-divider w-10"></span>
+                <h3 class="text-xs uppercase tracking-widest font-bold text-textMuted">Stack Tecnológico</h3>
+                <span class="stitch-divider w-10"></span>
+            </div>
+            <h3 class="font-display text-2xl font-semibold mb-10 tracking-tight">Herramientas y Tecnologías</h3>
+            <div class="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
+                
+                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                    <i class="fa-brands fa-html5 text-xl"></i>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider">HTML5</span>
+                </div>
+                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                    <i class="fa-brands fa-css3-alt text-xl"></i>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider">CSS3</span>
+                </div>
+                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                    <i class="fa-brands fa-js text-xl"></i>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider">JavaScript</span>
+                </div>
+                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                    <i class="fa-brands fa-react text-xl"></i>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider">React</span>
+                </div>
+                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                    <i class="fa-solid fa-code text-xl"></i>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider">TypeScript</span>
+                </div>
+                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                    <i class="fa-brands fa-java text-xl"></i>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider">Java</span>
+                </div>
+                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                    <i class="fa-solid fa-leaf text-xl"></i>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider">Spring</span>
+                </div>
+                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                    <i class="fa-solid fa-database text-xl"></i>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider">SQL</span>
+                </div>
+                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                    <i class="fa-brands fa-github text-xl"></i>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider">GitHub</span>
+                </div>
+                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                    <i class="fa-solid fa-compass-drafting text-xl"></i>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider">CAD</span>
+                </div>
+                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                    <i class="fa-solid fa-cubes text-xl"></i>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider">SolidWorks</span>
+                </div>
+                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                    <i class="fa-solid fa-palette text-xl"></i>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider">Canva</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos de Computación -->
+    <section id="proyectos" class="py-24 bg-surface">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-center gap-3 mb-3 text-rose">
+                <span class="stitch-divider w-10"></span>
+                <h3 class="text-xs uppercase tracking-widest font-bold text-textMuted">Desarrollo</h3>
+                <span class="stitch-divider w-10"></span>
+            </div>
+            <h3 class="font-display text-3xl font-semibold mb-14 text-center tracking-tight">Proyectos Recientes</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <div class="project-card gsap-reveal bg-accentLilac/40 p-8 rounded-3xl border-dashed-cute border-borderLilac card-hover flex flex-col h-full justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-lilacBold bg-white border-dashed-cute border-borderLilac px-3 py-1 rounded-full">Proyecto Integrador 2026</span>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-3 tracking-tight">Sistema de Gestión de Notas</h4>
+                        <p class="text-sm text-textMuted mb-6 leading-relaxed">
+                            Aplicación web desarrollada de para digitalizar y centralizar la gestión académica de la institución educativa. El ecosistema contempla cargas automatizadas de docentes, cálculo preciso de promedios ponderados, auditorías de seguridad y exportación directa de boletines oficiales a formatos PDF legibles.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="mb-4 flex flex-wrap gap-1.5">
+                            <span class="text-xs px-2.5 py-1 bg-white border border-borderLilac rounded-md font-medium text-textMuted">React</span>
+                            <span class="text-xs px-2.5 py-1 bg-white border border-borderLilac rounded-md font-medium text-textMuted">TypeScript</span>
+                            <span class="text-xs px-2.5 py-1 bg-white border border-borderLilac rounded-md font-medium text-textMuted">Java Spring Boot</span>
+                            <span class="text-xs px-2.5 py-1 bg-white border border-borderLilac rounded-md font-medium text-textMuted">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card gsap-reveal bg-accentPeach/40 p-8 rounded-3xl border-dashed-cute border-borderPeach card-hover flex flex-col h-full justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-peachBold bg-white border-dashed-cute border-borderPeach px-3 py-1 rounded-full">Proyecto Web 2025</span>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-3 tracking-tight">Sitio Web "THERMOHG"</h4>
+                        <p class="text-sm text-textMuted mb-6 leading-relaxed">
+                            Diseño y maquetación responsiva integral para un catálogo comercial de productos tecnológicos. El desarrollo cubrió las fases completas de UX/UI, establecimiento formal de paletas e identidad tipográfica corporativa, acoples modulares dinámicos de un flujo de compras interactivo básico y formularios.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="mb-6 flex flex-wrap gap-1.5">
+                            <span class="text-xs px-2.5 py-1 bg-white border border-borderPeach rounded-md font-medium text-textMuted">HTML5</span>
+                            <span class="text-xs px-2.5 py-1 bg-white border border-borderPeach rounded-md font-medium text-textMuted">CSS3</span>
+                            <span class="text-xs px-2.5 py-1 bg-white border border-borderPeach rounded-md font-medium text-textMuted">JavaScript</span>
+                            <span class="text-xs px-2.5 py-1 bg-white border border-borderPeach rounded-md font-medium text-textMuted">Responsive Design</span>
+                        </div>
+                        <a href="https://sofiaemma07.github.io/proyecto_final_sitio_web/" target="_blank"
+                            class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-peachBold hover:opacity-70 transition-opacity">
+                            Explorar Sitio en Vivo <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-16 project-card gsap-reveal">
+                <a href="https://github.com/sofiaemma07" target="_blank"
+                    class="inline-flex items-center gap-2 border-dashed-cute border-textMain text-textMain px-8 py-3.5 rounded-full font-medium hover:bg-textMain hover:text-white transition-all duration-300 shadow-sm">
+                    <i class="fa-brands fa-github text-base"></i> Ver Repositorios en GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diseño Digital -->
+    <section class="py-24 gradient-bloom relative overflow-hidden">
+        <div class="absolute -top-16 -left-16 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-16 -right-16 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative">
+            <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white/85 mb-4">
+                <span class="w-1.5 h-1.5 rounded-full bg-white"></span> Lado creativo
+            </span>
+            <h3 class="font-display text-3xl font-semibold mb-4 tracking-tight text-white">Diseño de Contenido Digital</h3>
+            <p class="text-white/85 mb-8 max-w-xl mx-auto text-sm leading-relaxed">Portafolio creativo enfocado en el diseño de piezas publicitarias, identidad visual y layouts digitales realizados para diversos clientes y proyectos personales.</p>
+            <a href="https://pomodoroverde.my.canva.site/portafolio-galindez-sofia" target="_blank"
+                class="design-item gsap-reveal inline-block bg-white text-textMain px-8 py-3.5 rounded-full font-medium border-dashed-cute border-white hover:bg-white/90 transition-colors duration-300 shadow-sm">
+                Ver Portafolio de Diseño
+            </a>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-24 bg-base border-t border-borderSoft relative overflow-hidden">
+        <div class="absolute top-10 left-1/3 w-72 h-72 bg-rose/15 rounded-full blur-3xl -z-0"></div>
+        <div class="max-w-6xl mx-auto px-4 relative">
+            <div class="flex items-center justify-center gap-3 mb-10 text-rose">
+                <span class="stitch-divider w-10"></span>
+                <h3 class="text-xs uppercase tracking-widest font-bold text-textMuted">Contacto</h3>
+                <span class="stitch-divider w-10"></span>
+            </div>
+            <div class="bg-surface p-8 sm:p-12 rounded-[32px] border-dashed-cute border-borderRose shadow-sm max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="contact-element gsap-reveal">
+                    <h3 class="font-display text-3xl font-semibold mb-4 tracking-tight">¡Hablemos!</h3>
+                    <p class="text-sm text-textMuted mb-8 leading-relaxed">Para oportunidades laborales, dudas técnicas o consultas sobre diseños creativos, no dudes en escribirme de forma directa.</p>
+
+                    <div class="space-y-4 text-sm font-medium">
+                        <div class="flex items-center text-textMain gap-3">
+                            <span class="w-8 h-8 rounded-lg bg-rose/20 flex items-center justify-center text-rose text-xs"><i class="fa-solid fa-envelope"></i></span>
+                            <span>semmagalindez@gmail.com</span>
+                        </div>
+                        <div class="flex items-center text-textMain gap-3">
+                            <span class="w-8 h-8 rounded-lg bg-lilacBold/20 flex items-center justify-center text-lilacBold text-xs"><i class="fa-solid fa-phone"></i></span>
+                            <span>+54 11 6267-4692</span>
+                        </div>
+                        <div class="flex items-center text-textMain gap-3">
+                            <span class="w-8 h-8 rounded-lg bg-peachBold/20 flex items-center justify-center text-peachBold text-xs"><i class="fa-solid fa-location-dot"></i></span>
+                            <span>Liniers, CABA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-element gsap-reveal">
+                    <form onsubmit="enviarFormulario(event)" action="https://formspree.io/f/xnjkanqb" method="POST" class="space-y-4">
+                        <div>
+                            <input type="text" name="nombre" placeholder="Nombre completo"
+                                class="w-full px-4 py-3.5 bg-base border-dashed-cute border-borderSoft rounded-xl focus:outline-none focus:border-rose text-sm transition-colors"
+                                required>
+                        </div>
+                        <div>
+                            <input type="email" name="email" placeholder="Correo electrónico"
+                                class="w-full px-4 py-3.5 bg-base border-dashed-cute border-borderSoft rounded-xl focus:outline-none focus:border-rose text-sm transition-colors"
+                                required>
+                        </div>
+                        <div>
+                            <textarea name="mensaje" rows="4" placeholder="Mensaje"
+                                class="w-full px-4 py-3.5 bg-base border-dashed-cute border-borderSoft rounded-xl focus:outline-none focus:border-rose text-sm resize-none transition-colors"
+                                required></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full gradient-bloom-btn text-white py-3.5 rounded-xl font-medium text-sm shadow-sm">
+                            Enviar Mensaje
+                        </button>
+                        <p id="contacto-status" class="text-sm font-medium text-center hidden"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Descargar CV -->
+    <section class="py-20 bg-surface border-t-2 border-dashed border-borderRose/50">
+        <div class="max-w-2xl mx-auto px-4 text-center cv-cta gsap-reveal">
+            <h3 class="font-display text-2xl md:text-3xl font-semibold mb-3 tracking-tight">¿Querés ver todo en un solo lugar?</h3>
+            <p class="text-sm text-textMuted mb-8 max-w-md mx-auto leading-relaxed">Descargá mi curriculum con el resumen de mi formación, experiencia y proyectos.</p>
+            <a href="./assets/CV-Sofia-Galindez.pdf" download
+                class="inline-flex items-center gap-3 gradient-bloom-btn text-white px-10 py-4 rounded-full font-semibold text-sm shadow-sm">
+                <i class="fa-solid fa-arrow-down-to-bracket"></i> Descargar Curriculum
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-surface text-center">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-center gap-3 mb-3 text-rose/70">
+                <span class="stitch-divider w-16"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-rose"></span>
+                <span class="stitch-divider w-16"></span>
+            </div>
+            <p class="text-xs text-textMuted font-medium">Diseñado y Programado por Sofía Galíndez | © 2026</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FDFBF7;
+    color: #2D2727;
+    background-image: radial-gradient(rgba(226, 121, 159, 0.22) 1.5px, transparent 1.5px);
+    background-size: 22px 22px;
+}
+
+.font-display {
+    font-family: 'Fraunces', serif;
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #E2799F;
+}
+
+.card-hover {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 30px -10px rgba(45, 39, 39, 0.10);
+}
+
+/* Bordes punteados/rayados "lindos" — el sello visual de la página */
+.border-dashed-cute {
+    border-width: 2px;
+    border-style: dashed;
+}
+
+.border-dotted-cute {
+    border-width: 2px;
+    border-style: dotted;
+}
+
+/* Divisor "cosido" para los rótulos de cada sección */
+.stitch-divider {
+    height: 0;
+    border-top: 2px dashed currentColor;
+    opacity: 0.45;
+}
+
+/* Fondo de puntos para los bloques oscuros */
+.dots-on-dark {
+    background-image: radial-gradient(rgba(251, 241, 236, 0.14) 1.5px, transparent 1.5px);
+    background-size: 22px 22px;
+}
+
+/* Bloque de alto contraste (Formación) */
+.deep-block {
+    background: radial-gradient(ellipse at top left, #4A2C46 0%, #341F30 55%, #2A1A27 100%);
+}
+
+/* Bloque vívido en degradé (Diseño Digital + botón CV) */
+.gradient-bloom {
+    background: linear-gradient(120deg, #E2799F 0%, #9B7FC7 52%, #E8965E 100%);
+    background-size: 180% 180%;
+}
+
+.gradient-bloom-btn {
+    background: linear-gradient(135deg, #E2799F 0%, #9B7FC7 50%, #E8965E 100%);
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    transition: background-position 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gradient-bloom-btn:hover {
+    background-position: 100% 50%;
+    transform: translateY(-3px);
+    box-shadow: 0 18px 30px -10px rgba(155, 127, 199, 0.45);
+}
+
+/* Pequeño adorno tipo "washi tape" en la esquina de elementos destacados */
+.corner-dot::before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    right: 20px;
+    width: 11px;
+    height: 11px;
+    border-radius: 9999px;
+    background: #E2799F;
+    border: 2px solid #FDFBF7;
+}
+
+.skill-circle {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.skill-circle:hover {
+    transform: scale(1.1) rotate(3deg);
+    background: linear-gradient(135deg, #E2799F 0%, #9B7FC7 50%, #E8965E 100%);
+    color: #FFFFFF;
+    border-color: transparent;
+    border-style: dashed;
+}
+
+.skill-circle:hover span,
+.skill-circle:hover i {
+    color: #FFFFFF;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Prevenir flashes de contenido sin estilos antes de que cargue GSAP */
+.gsap-reveal {
+    visibility: hidden;
+}
