@@ -33,21 +33,19 @@ async function enviarFormulario(e) {
     }
 }
 
-// === GSAP FIX: ESPERAR A QUE CARGUE TODO ===
+// ESPERAR A QUE CARGUE TODO ===
 window.addEventListener("load", () => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Hacer visibles los elementos antes de animarlos
     gsap.set(".gsap-reveal", { visibility: "visible" });
 
-    // Animar el Hero
     gsap.from('.hero-anim .gsap-reveal', {
         y: 40,
         opacity: 0,
         duration: 1,
         stagger: 0.15,
         ease: "power3.out",
-        clearProps: "transform" // SOLUCIÓN: Solo limpiamos el transform para no romper el hover ni ocultarlos
+        clearProps: "transform" 
     });
 
     // Función segura de activación al scrollear
@@ -64,7 +62,7 @@ window.addEventListener("load", () => {
                 opacity: 0,
                 duration: 0.7,
                 ease: "power2.out",
-                clearProps: "transform" // SOLUCIÓN: Mantiene el elemento visible al terminar
+                clearProps: "transform"
             });
         });
     }

@@ -28,7 +28,6 @@ body {
     box-shadow: 0 20px 30px -10px rgba(45, 39, 39, 0.10);
 }
 
-/* Bordes punteados/rayados "lindos" — el sello visual de la página */
 .border-dashed-cute {
     border-width: 2px;
     border-style: dashed;
@@ -39,20 +38,17 @@ body {
     border-style: dotted;
 }
 
-/* Divisor "cosido" para los rótulos de cada sección */
 .stitch-divider {
     height: 0;
     border-top: 2px dashed currentColor;
     opacity: 0.45;
 }
 
-/* Fondo de puntos para los bloques oscuros */
 .dots-on-dark {
     background-image: radial-gradient(rgba(251, 241, 236, 0.14) 1.5px, transparent 1.5px);
     background-size: 22px 22px;
 }
 
-/* Bloque de alto contraste (Formación) */
 .deep-block {
     background: radial-gradient(ellipse at top left, #4A2C46 0%, #341F30 55%, #2A1A27 100%);
 }
@@ -76,7 +72,6 @@ body {
     box-shadow: 0 18px 30px -10px rgba(155, 127, 199, 0.45);
 }
 
-/* Pequeño adorno tipo "washi tape" en la esquina de elementos destacados */
 .corner-dot::before {
     content: '';
     position: absolute;
