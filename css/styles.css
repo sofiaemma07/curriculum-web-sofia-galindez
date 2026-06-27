@@ -53,7 +53,6 @@ body {
     background: radial-gradient(ellipse at top left, #4A2C46 0%, #341F30 55%, #2A1A27 100%);
 }
 
-/* Bloque vívido en degradé (Diseño Digital + botón CV) */
 .gradient-bloom {
     background: linear-gradient(120deg, #E2799F 0%, #9B7FC7 52%, #E8965E 100%);
     background-size: 180% 180%;
@@ -105,7 +104,15 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Prevenir flashes de contenido sin estilos antes de que cargue GSAP */
 .gsap-reveal {
     visibility: hidden;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+    50% { transform: translateY(-6px); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+}
+
+.animate-bounce {
+    animation: bounce 1.6s infinite;
 }

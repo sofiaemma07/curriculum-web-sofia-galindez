@@ -96,7 +96,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between hero-anim min-h-[85vh] relative overflow-hidden">
+    <section class="pt-32 pb-20 px-4 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between hero-anim min-h-[92vh] relative overflow-hidden">
         <div class="absolute top-1/3 left-10 w-72 h-72 bg-rose/25 rounded-full blur-3xl -z-10"></div>
         <div class="absolute bottom-10 right-0 w-80 h-80 bg-lilacBold/20 rounded-full blur-3xl -z-10"></div>
         <div class="md:w-1/2 mb-10 md:mb-0 z-10 gsap-reveal">
@@ -119,15 +119,23 @@
         </div>
         <div class="md:w-1/2 flex justify-center md:justify-end z-10 gsap-reveal">
             <div class="relative corner-dot">
-                <div class="w-64 h-64 md:w-80 md:h-80 bg-accentLilac rounded-[38px] shadow-sm border-dashed-cute border-rose/70 flex items-center justify-center overflow-hidden rotate-2 hover:rotate-0 transition-transform duration-500">
+                <div class="w-64 h-64 md:w-96 md:h-96 bg-accentLilac rounded-[38px] shadow-sm border-dashed-cute border-rose/70 flex items-center justify-center overflow-hidden rotate-2 hover:rotate-0 transition-transform duration-500">
                     <img src="./assets/foto.jpeg" alt="Fotografía de Sofía Galíndez" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
+
+        <!-- Boton scroll hacia abajo -->
+        <a href="#sobre-mi" class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-textMuted hover:text-rose transition-colors duration-300 group" aria-label="Ir a Sobre mí">
+            <span class="text-[10px] font-bold uppercase tracking-widest opacity-60 group-hover:opacity-100 transition-opacity">Conoceme</span>
+            <div class="w-10 h-10 rounded-full border-2 border-dashed border-borderRose flex items-center justify-center animate-bounce group-hover:border-rose transition-colors duration-300">
+                <i class="fa-solid fa-chevron-down text-sm"></i>
+            </div>
+        </a>
     </section>
 
     <!-- Sobre Mí -->
-    <section id="sobre-mi" class="py-24 bg-surface border-y border-borderSoft">
+    <section id="sobre-mi" class="py-24 bg-surface border-y border-borderSoft" style="scroll-margin-top: 185px;">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex items-center justify-center gap-3 mb-3 text-rose">
                 <span class="stitch-divider w-10"></span>
@@ -322,6 +330,10 @@
                 <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
                     <i class="fa-solid fa-palette text-xl"></i>
                     <span class="text-[10px] font-semibold uppercase tracking-wider">Canva</span>
+                </div>
+                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                    <i class="fa-solid fa-network-wired text-xl"></i>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider">Packet Tracer</span>
                 </div>
 
             </div>
