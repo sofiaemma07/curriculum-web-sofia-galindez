@@ -9,7 +9,7 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Tailwind Configuration -->
+    <!-- Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
@@ -43,7 +43,9 @@
     </script>
 
     <!-- Google Fonts & FontAwesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- GSAP for Animations -->
@@ -61,7 +63,9 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <span class="font-display font-bold text-xl tracking-tight bg-gradient-to-r from-rose via-lilacBold to-peachBold bg-clip-text text-transparent">S.G.<span class="text-textMuted font-sans font-normal text-sm">.dev</span></span>
+                    <span
+                        class="font-display font-bold text-xl tracking-tight bg-gradient-to-r from-rose via-lilacBold to-peachBold bg-clip-text text-transparent">S.G.<span
+                            class="text-textMuted font-sans font-normal text-sm">.dev</span></span>
                 </div>
 
                 <!-- Desktop Menu -->
@@ -72,7 +76,7 @@
                     <a href="#contacto" class="nav-link text-sm font-medium">Contacto</a>
                 </div>
 
-                <!-- Mobile Menu Button -->
+                <!-- Boton hamburguesa -->
                 <div class="flex items-center md:hidden">
                     <button id="mobile-menu-button" class="text-textMain focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -84,51 +88,76 @@
             </div>
         </div>
 
-        <!-- Mobile Menu -->
+        <!-- Menu movil -->
         <div id="mobile-menu" class="hidden md:hidden bg-surface border-b-2 border-dashed border-borderRose/60">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#sobre-mi" class="block px-3 py-2 rounded-md text-base font-medium text-textMain hover:bg-accentPink">Sobre mí</a>
-                <a href="#formacion" class="block px-3 py-2 rounded-md text-base font-medium text-textMain hover:bg-accentPink">Formación</a>
-                <a href="#proyectos" class="block px-3 py-2 rounded-md text-base font-medium text-textMain hover:bg-accentPink">Proyectos</a>
-                <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-textMain hover:bg-accentPink">Contacto</a>
+                <a href="#sobre-mi"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-textMain hover:bg-accentPink">Sobre
+                    mí</a>
+                <a href="#formacion"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-textMain hover:bg-accentPink">Formación</a>
+                <a href="#proyectos"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-textMain hover:bg-accentPink">Proyectos</a>
+                <a href="#contacto"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-textMain hover:bg-accentPink">Contacto</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between hero-anim min-h-[92vh] relative overflow-hidden">
+    <section
+        class="pt-32 pb-20 px-4 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between hero-anim min-h-[92vh] relative overflow-hidden">
         <div class="absolute top-1/3 left-10 w-72 h-72 bg-rose/25 rounded-full blur-3xl -z-10"></div>
         <div class="absolute bottom-10 right-0 w-80 h-80 bg-lilacBold/20 rounded-full blur-3xl -z-10"></div>
         <div class="md:w-1/2 mb-10 md:mb-0 z-10 gsap-reveal">
             <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-rose mb-4">
                 <span class="w-1.5 h-1.5 rounded-full bg-rose"></span> Portfolio 2026
             </span>
-            <h1 class="font-display text-4xl md:text-6xl font-semibold mb-4 leading-tight tracking-tight">Sofía Galíndez</h1>
+            <h1 class="font-display text-4xl md:text-6xl font-semibold mb-4 leading-tight tracking-tight">Sofía Galíndez
+            </h1>
             <h2 class="text-xl md:text-2xl text-textMuted mb-6 font-medium">Estudiante Técnica en Computación</h2>
             <p class="text-textMuted mb-8 max-w-md leading-relaxed">
-                Apasionada por la tecnología, el diseño y la creación de soluciones digitales. Te invito a conocer más sobre mi perfil y proyectos.
+               Con interés en desarrollo web, diseño de interfaces y experiencias digitales. Actualmente busco mi primera oportunidad profesional para seguir creciendo y aportar soluciones de calidad.
             </p>
             <div class="flex flex-wrap gap-4">
-                <a href="#proyectos" class="bg-textMain text-white px-8 py-3.5 rounded-full font-medium hover:bg-textMuted transition-colors duration-300 shadow-sm">
+                <a href="#proyectos"
+                    class="bg-textMain text-white px-8 py-3.5 rounded-full font-medium hover:bg-textMuted transition-colors duration-300 shadow-sm">
                     Ver Proyectos
                 </a>
-                <a href="#contacto" class="bg-white border-dashed-cute border-borderRose text-textMain px-8 py-3.5 rounded-full font-medium hover:bg-accentPink/40 transition-colors duration-300">
+                <a href="#contacto"
+                    class="bg-white border-dashed-cute border-borderRose text-textMain px-8 py-3.5 rounded-full font-medium hover:bg-accentPink/40 transition-colors duration-300">
                     Hablemos
                 </a>
             </div>
         </div>
-        <div class="md:w-1/2 flex justify-center md:justify-end z-10 gsap-reveal">
-            <div class="relative corner-dot">
-                <div class="w-64 h-64 md:w-96 md:h-96 bg-accentLilac rounded-[38px] shadow-sm border-dashed-cute border-rose/70 flex items-center justify-center overflow-hidden rotate-2 hover:rotate-0 transition-transform duration-500">
-                    <img src="./assets/foto.jpeg" alt="Fotografía de Sofía Galíndez" class="w-full h-full object-cover">
+        <div class="relative w-[320px] h-[320px] md:w-[400px] md:h-[400px] my-10 p-8">
+
+            <div class="absolute inset-8 bg-[#Fce8f0] rotate-6 translate-x-4 translate-y-4 rounded-[32px] border-2 border-dashed border-[#E9AFC7]">
+            </div>
+
+            <div class="absolute inset-8 bg-[#f9d8e8] -rotate-6 -translate-x-4 -translate-y-4 rounded-[32px] border-2 border-dashed border-[#E9AFC7]">
+            </div>
+
+            <div class="relative w-full h-full rounded-[32px] overflow-hidden border-2 border-white shadow-2xl z-10">
+                <img src="./assets/foto.jpeg" alt="Sofía Galíndez" class="w-full h-full object-cover">
+
+                <div class="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-[#FDFBF7] opacity-80">
                 </div>
+            </div>
+
+            <div class="absolute top-4 left-4 z-20 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg border-2 border-dashed border-[#E9AFC7]">
+                <i class="fa-solid fa-code text-[#E9AFC7]"></i>
             </div>
         </div>
 
         <!-- Boton scroll hacia abajo -->
-        <a href="#sobre-mi" class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-textMuted hover:text-rose transition-colors duration-300 group" aria-label="Ir a Sobre mí">
-            <span class="text-[10px] font-bold uppercase tracking-widest opacity-60 group-hover:opacity-100 transition-opacity">Conoceme</span>
-            <div class="w-10 h-10 rounded-full border-2 border-dashed border-borderRose flex items-center justify-center animate-bounce group-hover:border-rose transition-colors duration-300">
+        <a href="#sobre-mi"
+            class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-textMuted hover:text-rose transition-colors duration-300 group"
+            aria-label="Ir a Sobre mí">
+            <span
+                class="text-[10px] font-bold uppercase tracking-widest opacity-60 group-hover:opacity-100 transition-opacity">Conoceme</span>
+            <div
+                class="w-10 h-10 rounded-full border-2 border-dashed border-borderRose flex items-center justify-center animate-bounce group-hover:border-rose transition-colors duration-300">
                 <i class="fa-solid fa-chevron-down text-sm"></i>
             </div>
         </a>
@@ -146,35 +175,56 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                 <!-- Tarjeta 1 (Quién Soy) -->
-                <div class="item-bento gsap-reveal bg-base p-8 rounded-3xl border-dashed-cute border-borderRose card-hover flex flex-col h-full justify-between">
+                <div
+                    class="item-bento gsap-reveal bg-base p-8 rounded-3xl border-dashed-cute border-borderRose card-hover flex flex-col h-full justify-between">
                     <div>
-                        <div class="w-10 h-10 rounded-xl bg-rose/20 flex items-center justify-center text-rose mb-6"><i class="fa-solid fa-user-astronaut"></i></div>
+                        <div class="w-10 h-10 rounded-xl bg-rose/20 flex items-center justify-center text-rose mb-6"><i
+                                class="fa-solid fa-user-astronaut"></i></div>
                         <h4 class="font-bold text-xl mb-3">Quién Soy</h4>
-                        <p class="text-sm text-textMuted leading-relaxed">Estudiante técnica en computación con conocimientos en programación estructurada y maquetación visual. Busco continuar desarrollando mis habilidades en entornos profesionales, aportando responsabilidad, capacidad de aprendizaje y una actitud colaborativa para el trabajo en equipo.</p>
+                        <p class="text-sm text-textMuted leading-relaxed">Estudiante técnica en computación con
+                            conocimientos en programación estructurada y maquetación visual. Busco continuar
+                            desarrollando mis habilidades en entornos profesionales, aportando responsabilidad,
+                            capacidad de aprendizaje y una actitud colaborativa para el trabajo en equipo.</p>
                     </div>
                 </div>
 
                 <!-- Tarjeta 2 (Habilidades Blandas) -->
-                <div class="item-bento gsap-reveal bg-base p-8 rounded-3xl border-dashed-cute border-borderLilac card-hover flex flex-col h-full justify-between">
+                <div
+                    class="item-bento gsap-reveal bg-base p-8 rounded-3xl border-dashed-cute border-borderLilac card-hover flex flex-col h-full justify-between">
                     <div>
-                        <div class="w-10 h-10 rounded-xl bg-lilacBold/20 flex items-center justify-center text-lilacBold mb-6"><i class="fa-solid fa-brain"></i></div>
+                        <div
+                            class="w-10 h-10 rounded-xl bg-lilacBold/20 flex items-center justify-center text-lilacBold mb-6">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
                         <h4 class="font-bold text-xl mb-3">Habilidades Blandas</h4>
                         <ul class="text-sm text-textMuted space-y-3 font-medium">
-                            <li class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-lilacBold"></span> Escucha activa</li>
-                            <li class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-lilacBold"></span> Proactividad</li>
-                            <li class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-lilacBold"></span> Trabajo en equipo</li>
-                            <li class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-lilacBold"></span> Pensamiento crítico</li>
-                            <li class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-lilacBold"></span> Creatividad</li>
+                            <li class="flex items-center gap-2.5"><span
+                                    class="w-1.5 h-1.5 rounded-full bg-lilacBold"></span> Escucha activa</li>
+                            <li class="flex items-center gap-2.5"><span
+                                    class="w-1.5 h-1.5 rounded-full bg-lilacBold"></span> Proactividad</li>
+                            <li class="flex items-center gap-2.5"><span
+                                    class="w-1.5 h-1.5 rounded-full bg-lilacBold"></span> Trabajo en equipo</li>
+                            <li class="flex items-center gap-2.5"><span
+                                    class="w-1.5 h-1.5 rounded-full bg-lilacBold"></span> Pensamiento crítico</li>
+                            <li class="flex items-center gap-2.5"><span
+                                    class="w-1.5 h-1.5 rounded-full bg-lilacBold"></span> Creatividad</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Tarjeta 3 (Idiomas) -->
-                <div class="item-bento gsap-reveal bg-base p-8 rounded-3xl border-dashed-cute border-borderPeach card-hover flex flex-col h-full justify-between">
+                <div
+                    class="item-bento gsap-reveal bg-base p-8 rounded-3xl border-dashed-cute border-borderPeach card-hover flex flex-col h-full justify-between">
                     <div>
-                        <div class="w-10 h-10 rounded-xl bg-peachBold/20 flex items-center justify-center text-peachBold mb-6"><i class="fa-solid fa-globe"></i></div>
+                        <div
+                            class="w-10 h-10 rounded-xl bg-peachBold/20 flex items-center justify-center text-peachBold mb-6">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
                         <h4 class="font-bold text-xl mb-3">Idiomas</h4>
-                        <p class="text-sm text-textMuted leading-relaxed"><span class="font-semibold text-textMain">Inglés - Nivel B2:</span> Capacidad consolidada para mantener conversaciones fluidas y comprensión lectora de documentación técnica avanzada sin complicaciones.</p>
+                        <p class="text-sm text-textMuted leading-relaxed"><span
+                                class="font-semibold text-textMain">Inglés - Nivel B2:</span> Capacidad consolidada para
+                            mantener conversaciones fluidas y comprensión lectora de documentación técnica avanzada sin
+                            complicaciones.</p>
                     </div>
                 </div>
 
@@ -191,33 +241,48 @@
                 <h3 class="text-xs uppercase tracking-widest font-bold text-rose/90">Trayectoria</h3>
                 <span class="stitch-divider w-10"></span>
             </div>
-            <h3 class="font-display text-3xl font-semibold mb-16 text-center tracking-tight text-textInverse">Formación Académica</h3>
-            
+            <h3 class="font-display text-3xl font-semibold mb-16 text-center tracking-tight text-textInverse">Formación
+                Académica</h3>
+
             <div class="relative border-l-2 border-dashed border-textInverse/30 ml-4 md:ml-32 space-y-12 pb-4">
-                
+
                 <div class="relative pl-8 timeline-card gsap-reveal">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-plum border-2 border-rose z-10"></div>
-                    <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border-dashed-cute border-textInverse/25 shadow-sm card-hover max-w-2xl">
-                        <span class="inline-block gradient-bloom-btn text-white text-xs font-bold px-2.5 py-1 rounded-md mb-2">2021 - En curso</span>
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-plum border-2 border-rose z-10">
+                    </div>
+                    <div
+                        class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border-dashed-cute border-textInverse/25 shadow-sm card-hover max-w-2xl">
+                        <span
+                            class="inline-block gradient-bloom-btn text-white text-xs font-bold px-2.5 py-1 rounded-md mb-2">2021
+                            - En curso</span>
                         <h4 class="font-bold text-xl text-textInverse">Título de Técnico en Computación</h4>
                         <p class="text-sm text-textInverse/70 mt-1">Escuela Técnica N° 35 - Ing. Eduardo Latzina</p>
-                        <p class="text-xs text-textInverse/55 mt-2">Formación técnica enfocada en lógica de programación, bases de datos, redes y diseño de sistemas complejos de software.</p>
+                        <p class="text-xs text-textInverse/55 mt-2">Formación técnica enfocada en lógica de
+                            programación, bases de datos, redes y diseño de sistemas complejos de software.</p>
                     </div>
                 </div>
 
                 <div class="relative pl-8 timeline-card gsap-reveal">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-plum border-2 border-lilacBold z-10"></div>
-                    <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border-dashed-cute border-textInverse/25 shadow-sm card-hover max-w-2xl">
-                        <span class="inline-block bg-lilacBold/80 text-white text-xs font-bold px-2.5 py-1 rounded-md mb-2">2016 - 2022</span>
+                    <div
+                        class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-plum border-2 border-lilacBold z-10">
+                    </div>
+                    <div
+                        class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border-dashed-cute border-textInverse/25 shadow-sm card-hover max-w-2xl">
+                        <span
+                            class="inline-block bg-lilacBold/80 text-white text-xs font-bold px-2.5 py-1 rounded-md mb-2">2016
+                            - 2022</span>
                         <h4 class="font-bold text-xl text-textInverse">Estudios Avanzados de Idioma Inglés</h4>
                         <p class="text-sm text-textInverse/70 mt-1">CECIE 18 de 18</p>
                     </div>
                 </div>
 
                 <div class="relative pl-8 timeline-card gsap-reveal">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-plum border-2 border-peachBold z-10"></div>
-                    <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border-dashed-cute border-textInverse/25 shadow-sm card-hover max-w-2xl">
-                        <span class="inline-block bg-peachBold/80 text-white text-xs font-bold px-2.5 py-1 rounded-md mb-2">2023</span>
+                    <div
+                        class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-plum border-2 border-peachBold z-10">
+                    </div>
+                    <div
+                        class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border-dashed-cute border-textInverse/25 shadow-sm card-hover max-w-2xl">
+                        <span
+                            class="inline-block bg-peachBold/80 text-white text-xs font-bold px-2.5 py-1 rounded-md mb-2">2023</span>
                         <h4 class="font-bold text-xl text-textInverse">Curso Técnico AutoCAD y Bases de SolidWorks</h4>
                         <p class="text-sm text-textInverse/70 mt-1">Escuela Técnica N° 35 Ing. Eduardo Latzina</p>
                     </div>
@@ -236,7 +301,8 @@
                 <span class="stitch-divider w-10"></span>
             </div>
             <h3 class="font-display text-3xl font-semibold mb-12 text-center tracking-tight">Experiencia Laboral</h3>
-            <div class="experience-card gsap-reveal bg-base p-8 rounded-3xl border-dashed-cute border-borderPeach card-hover max-w-3xl mx-auto">
+            <div
+                class="experience-card gsap-reveal bg-base p-8 rounded-3xl border-dashed-cute border-borderPeach card-hover max-w-3xl mx-auto">
                 <div class="flex flex-wrap justify-between items-start gap-2 mb-4">
                     <div>
                         <span class="text-xs font-bold uppercase tracking-wider text-peachBold">2025 - 2026</span>
@@ -246,23 +312,32 @@
                 <ul class="text-sm text-textMuted space-y-3">
                     <li class="flex items-start gap-2">
                         <span class="mt-1 text-peachBold text-xs"><i class="fa-solid fa-check"></i></span>
-                        <span>Creación y maquetación de piezas publicitarias (posts, flyers) personalizadas para clientes de diversos rubros comerciales.</span>
+                        <span>Creación y maquetación de piezas publicitarias (posts, flyers) personalizadas para
+                            clientes de diversos rubros comerciales.</span>
                     </li>
                     <li class="flex items-start gap-2">
                         <span class="mt-1 text-peachBold text-xs"><i class="fa-solid fa-check"></i></span>
-                        <span>Adaptación estratégica de contenido digital a redes sociales según las guías estéticas de cada cliente.</span>
+                        <span>Adaptación estratégica de contenido digital a redes sociales según las guías estéticas de
+                            cada cliente.</span>
                     </li>
                     <li class="flex items-start gap-2">
                         <span class="mt-1 text-peachBold text-xs"><i class="fa-solid fa-check"></i></span>
-                        <span>Implementación sistemática de mejoras basadas en el feedback visual, logrando optimizar la interacción.</span>
+                        <span>Implementación sistemática de mejoras basadas en el feedback visual, logrando optimizar la
+                            interacción.</span>
                     </li>
                     <li class="pt-4 border-t-2 border-dashed border-borderPeach mt-4">
-                        <span class="font-semibold text-textMain block mb-2 text-xs uppercase tracking-wider">Referencias Comprobables:</span>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs bg-white p-3 rounded-xl border-dashed-cute border-borderPeach">
-                            <p class="font-medium text-textMain flex items-center gap-1.5"><i class="fa-solid fa-prescription-bottle-medical text-peachBold"></i> Droguería Baltari</p>
+                        <span
+                            class="font-semibold text-textMain block mb-2 text-xs uppercase tracking-wider">Referencias
+                            Comprobables:</span>
+                        <div
+                            class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs bg-white p-3 rounded-xl border-dashed-cute border-borderPeach">
+                            <p class="font-medium text-textMain flex items-center gap-1.5"><i
+                                    class="fa-solid fa-prescription-bottle-medical text-peachBold"></i> Droguería
+                                Baltari</p>
                             <p class="font-medium text-textMain flex items-center gap-1.5">
-                                <i class="fa-solid fa-music text-peachBold"></i> Coro Sonoras 
-                                (<a href="https://www.instagram.com/sonoras.coro/" target="_blank" class="text-textMain underline hover:opacity-70 font-semibold">@sonoras.coro</a>)
+                                <i class="fa-solid fa-music text-peachBold"></i> Coro Sonoras
+                                (<a href="https://www.instagram.com/sonoras.coro/" target="_blank"
+                                    class="text-textMain underline hover:opacity-70 font-semibold">@sonoras.coro</a>)
                             </p>
                         </div>
                     </li>
@@ -282,56 +357,69 @@
             </div>
             <h3 class="font-display text-2xl font-semibold mb-10 tracking-tight">Herramientas y Tecnologías</h3>
             <div class="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
-                
-                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+
+                <div
+                    class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
                     <i class="fa-brands fa-html5 text-xl"></i>
                     <span class="text-[10px] font-semibold uppercase tracking-wider">HTML5</span>
                 </div>
-                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                <div
+                    class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
                     <i class="fa-brands fa-css3-alt text-xl"></i>
                     <span class="text-[10px] font-semibold uppercase tracking-wider">CSS3</span>
                 </div>
-                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                <div
+                    class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
                     <i class="fa-brands fa-js text-xl"></i>
                     <span class="text-[10px] font-semibold uppercase tracking-wider">JavaScript</span>
                 </div>
-                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                <div
+                    class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
                     <i class="fa-brands fa-react text-xl"></i>
                     <span class="text-[10px] font-semibold uppercase tracking-wider">React</span>
                 </div>
-                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                <div
+                    class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
                     <i class="fa-solid fa-code text-xl"></i>
                     <span class="text-[10px] font-semibold uppercase tracking-wider">TypeScript</span>
                 </div>
-                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                <div
+                    class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
                     <i class="fa-brands fa-java text-xl"></i>
                     <span class="text-[10px] font-semibold uppercase tracking-wider">Java</span>
                 </div>
-                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                <div
+                    class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
                     <i class="fa-solid fa-leaf text-xl"></i>
                     <span class="text-[10px] font-semibold uppercase tracking-wider">Spring</span>
                 </div>
-                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                <div
+                    class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
                     <i class="fa-solid fa-database text-xl"></i>
                     <span class="text-[10px] font-semibold uppercase tracking-wider">SQL</span>
                 </div>
-                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                <div
+                    class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
                     <i class="fa-brands fa-github text-xl"></i>
                     <span class="text-[10px] font-semibold uppercase tracking-wider">GitHub</span>
                 </div>
-                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                <div
+                    class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
                     <i class="fa-solid fa-compass-drafting text-xl"></i>
                     <span class="text-[10px] font-semibold uppercase tracking-wider">CAD</span>
                 </div>
-                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                <div
+                    class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
                     <i class="fa-solid fa-cubes text-xl"></i>
                     <span class="text-[10px] font-semibold uppercase tracking-wider">SolidWorks</span>
                 </div>
-                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                <div
+                    class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
                     <i class="fa-solid fa-palette text-xl"></i>
                     <span class="text-[10px] font-semibold uppercase tracking-wider">Canva</span>
                 </div>
-                <div class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
+                <div
+                    class="tag-item gsap-reveal skill-circle w-24 h-24 rounded-full bg-surface border-dashed-cute border-borderLilac flex flex-col items-center justify-center gap-1 shadow-sm cursor-default">
                     <i class="fa-solid fa-network-wired text-xl"></i>
                     <span class="text-[10px] font-semibold uppercase tracking-wider">Packet Tracer</span>
                 </div>
@@ -351,42 +439,64 @@
             <h3 class="font-display text-3xl font-semibold mb-14 text-center tracking-tight">Proyectos Recientes</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                <div class="project-card gsap-reveal bg-accentLilac/40 p-8 rounded-3xl border-dashed-cute border-borderLilac card-hover flex flex-col h-full justify-between">
+                <div
+                    class="project-card gsap-reveal bg-accentLilac/40 p-8 rounded-3xl border-dashed-cute border-borderLilac card-hover flex flex-col h-full justify-between">
                     <div>
                         <div class="flex justify-between items-center mb-4">
-                            <span class="text-xs font-bold uppercase tracking-wider text-lilacBold bg-white border-dashed-cute border-borderLilac px-3 py-1 rounded-full">Proyecto Integrador 2026</span>
+                            <span
+                                class="text-xs font-bold uppercase tracking-wider text-lilacBold bg-white border-dashed-cute border-borderLilac px-3 py-1 rounded-full">Proyecto
+                                Integrador 2026</span>
                         </div>
                         <h4 class="text-2xl font-bold mb-3 tracking-tight">Sistema de Gestión de Notas</h4>
                         <p class="text-sm text-textMuted mb-6 leading-relaxed">
-                            Aplicación web desarrollada de para digitalizar y centralizar la gestión académica de la institución educativa. El ecosistema contempla cargas automatizadas de docentes, cálculo preciso de promedios ponderados, auditorías de seguridad y exportación directa de boletines oficiales a formatos PDF legibles.
+                            Aplicación web desarrollada de para digitalizar y centralizar la gestión académica de la
+                            institución educativa. El ecosistema contempla cargas automatizadas de docentes, cálculo
+                            preciso de promedios ponderados, auditorías de seguridad y exportación directa de boletines
+                            oficiales a formatos PDF legibles.
                         </p>
                     </div>
                     <div>
                         <div class="mb-4 flex flex-wrap gap-1.5">
-                            <span class="text-xs px-2.5 py-1 bg-white border border-borderLilac rounded-md font-medium text-textMuted">React</span>
-                            <span class="text-xs px-2.5 py-1 bg-white border border-borderLilac rounded-md font-medium text-textMuted">TypeScript</span>
-                            <span class="text-xs px-2.5 py-1 bg-white border border-borderLilac rounded-md font-medium text-textMuted">Java Spring Boot</span>
-                            <span class="text-xs px-2.5 py-1 bg-white border border-borderLilac rounded-md font-medium text-textMuted">PostgreSQL</span>
+                            <span
+                                class="text-xs px-2.5 py-1 bg-white border border-borderLilac rounded-md font-medium text-textMuted">React</span>
+                            <span
+                                class="text-xs px-2.5 py-1 bg-white border border-borderLilac rounded-md font-medium text-textMuted">TypeScript</span>
+                            <span
+                                class="text-xs px-2.5 py-1 bg-white border border-borderLilac rounded-md font-medium text-textMuted">Java
+                                Spring Boot</span>
+                            <span
+                                class="text-xs px-2.5 py-1 bg-white border border-borderLilac rounded-md font-medium text-textMuted">PostgreSQL</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card gsap-reveal bg-accentPeach/40 p-8 rounded-3xl border-dashed-cute border-borderPeach card-hover flex flex-col h-full justify-between">
+                <div
+                    class="project-card gsap-reveal bg-accentPeach/40 p-8 rounded-3xl border-dashed-cute border-borderPeach card-hover flex flex-col h-full justify-between">
                     <div>
                         <div class="flex justify-between items-center mb-4">
-                            <span class="text-xs font-bold uppercase tracking-wider text-peachBold bg-white border-dashed-cute border-borderPeach px-3 py-1 rounded-full">Proyecto Web 2025</span>
+                            <span
+                                class="text-xs font-bold uppercase tracking-wider text-peachBold bg-white border-dashed-cute border-borderPeach px-3 py-1 rounded-full">Proyecto
+                                Web 2025</span>
                         </div>
                         <h4 class="text-2xl font-bold mb-3 tracking-tight">Sitio Web "THERMOHG"</h4>
                         <p class="text-sm text-textMuted mb-6 leading-relaxed">
-                            Diseño y maquetación responsiva integral para un catálogo comercial de productos tecnológicos. El desarrollo cubrió las fases completas de UX/UI, establecimiento formal de paletas e identidad tipográfica corporativa, acoples modulares dinámicos de un flujo de compras interactivo básico y formularios.
+                            Diseño y maquetación responsiva integral para un catálogo comercial de productos
+                            tecnológicos. El desarrollo cubrió las fases completas de UX/UI, establecimiento formal de
+                            paletas e identidad tipográfica corporativa, acoples modulares dinámicos de un flujo de
+                            compras interactivo básico y formularios.
                         </p>
                     </div>
                     <div>
                         <div class="mb-6 flex flex-wrap gap-1.5">
-                            <span class="text-xs px-2.5 py-1 bg-white border border-borderPeach rounded-md font-medium text-textMuted">HTML5</span>
-                            <span class="text-xs px-2.5 py-1 bg-white border border-borderPeach rounded-md font-medium text-textMuted">CSS3</span>
-                            <span class="text-xs px-2.5 py-1 bg-white border border-borderPeach rounded-md font-medium text-textMuted">JavaScript</span>
-                            <span class="text-xs px-2.5 py-1 bg-white border border-borderPeach rounded-md font-medium text-textMuted">Responsive Design</span>
+                            <span
+                                class="text-xs px-2.5 py-1 bg-white border border-borderPeach rounded-md font-medium text-textMuted">HTML5</span>
+                            <span
+                                class="text-xs px-2.5 py-1 bg-white border border-borderPeach rounded-md font-medium text-textMuted">CSS3</span>
+                            <span
+                                class="text-xs px-2.5 py-1 bg-white border border-borderPeach rounded-md font-medium text-textMuted">JavaScript</span>
+                            <span
+                                class="text-xs px-2.5 py-1 bg-white border border-borderPeach rounded-md font-medium text-textMuted">Responsive
+                                Design</span>
                         </div>
                         <a href="https://sofiaemma07.github.io/proyecto_final_sitio_web/" target="_blank"
                             class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-peachBold hover:opacity-70 transition-opacity">
@@ -414,8 +524,11 @@
             <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white/85 mb-4">
                 <span class="w-1.5 h-1.5 rounded-full bg-white"></span> Lado creativo
             </span>
-            <h3 class="font-display text-3xl font-semibold mb-4 tracking-tight text-white">Diseño de Contenido Digital</h3>
-            <p class="text-white/85 mb-8 max-w-xl mx-auto text-sm leading-relaxed">Portafolio creativo enfocado en el diseño de piezas publicitarias, identidad visual y layouts digitales realizados para diversos clientes y proyectos personales.</p>
+            <h3 class="font-display text-3xl font-semibold mb-4 tracking-tight text-white">Diseño de Contenido Digital
+            </h3>
+            <p class="text-white/85 mb-8 max-w-xl mx-auto text-sm leading-relaxed">Portafolio creativo enfocado en el
+                diseño de piezas publicitarias, identidad visual y layouts digitales realizados para diversos clientes y
+                proyectos personales.</p>
             <a href="https://pomodoroverde.my.canva.site/portafolio-galindez-sofia" target="_blank"
                 class="design-item gsap-reveal inline-block bg-white text-textMain px-8 py-3.5 rounded-full font-medium border-dashed-cute border-white hover:bg-white/90 transition-colors duration-300 shadow-sm">
                 Ver Portafolio de Diseño
@@ -432,29 +545,38 @@
                 <h3 class="text-xs uppercase tracking-widest font-bold text-textMuted">Contacto</h3>
                 <span class="stitch-divider w-10"></span>
             </div>
-            <div class="bg-surface p-8 sm:p-12 rounded-[32px] border-dashed-cute border-borderRose shadow-sm max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div
+                class="bg-surface p-8 sm:p-12 rounded-[32px] border-dashed-cute border-borderRose shadow-sm max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="contact-element gsap-reveal">
                     <h3 class="font-display text-3xl font-semibold mb-4 tracking-tight">¡Hablemos!</h3>
-                    <p class="text-sm text-textMuted mb-8 leading-relaxed">Para oportunidades laborales, dudas técnicas o consultas sobre diseños creativos, no dudes en escribirme de forma directa.</p>
+                    <p class="text-sm text-textMuted mb-8 leading-relaxed">Para oportunidades laborales, dudas técnicas
+                        o consultas sobre diseños creativos, no dudes en escribirme de forma directa.</p>
 
                     <div class="space-y-4 text-sm font-medium">
                         <div class="flex items-center text-textMain gap-3">
-                            <span class="w-8 h-8 rounded-lg bg-rose/20 flex items-center justify-center text-rose text-xs"><i class="fa-solid fa-envelope"></i></span>
+                            <span
+                                class="w-8 h-8 rounded-lg bg-rose/20 flex items-center justify-center text-rose text-xs"><i
+                                    class="fa-solid fa-envelope"></i></span>
                             <span>semmagalindez@gmail.com</span>
                         </div>
                         <div class="flex items-center text-textMain gap-3">
-                            <span class="w-8 h-8 rounded-lg bg-lilacBold/20 flex items-center justify-center text-lilacBold text-xs"><i class="fa-solid fa-phone"></i></span>
+                            <span
+                                class="w-8 h-8 rounded-lg bg-lilacBold/20 flex items-center justify-center text-lilacBold text-xs"><i
+                                    class="fa-solid fa-phone"></i></span>
                             <span>+54 11 6267-4692</span>
                         </div>
                         <div class="flex items-center text-textMain gap-3">
-                            <span class="w-8 h-8 rounded-lg bg-peachBold/20 flex items-center justify-center text-peachBold text-xs"><i class="fa-solid fa-location-dot"></i></span>
+                            <span
+                                class="w-8 h-8 rounded-lg bg-peachBold/20 flex items-center justify-center text-peachBold text-xs"><i
+                                    class="fa-solid fa-location-dot"></i></span>
                             <span>Liniers, CABA</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="contact-element gsap-reveal">
-                    <form onsubmit="enviarFormulario(event)" action="https://formspree.io/f/xnjkanqb" method="POST" class="space-y-4">
+                    <form onsubmit="enviarFormulario(event)" action="https://formspree.io/f/xnjkanqb" method="POST"
+                        class="space-y-4">
                         <div>
                             <input type="text" name="nombre" placeholder="Nombre completo"
                                 class="w-full px-4 py-3.5 bg-base border-dashed-cute border-borderSoft rounded-xl focus:outline-none focus:border-rose text-sm transition-colors"
@@ -484,8 +606,10 @@
     <!-- Descargar CV -->
     <section class="py-20 bg-surface border-t-2 border-dashed border-borderRose/50">
         <div class="max-w-2xl mx-auto px-4 text-center cv-cta gsap-reveal">
-            <h3 class="font-display text-2xl md:text-3xl font-semibold mb-3 tracking-tight">¿Querés ver todo en un solo lugar?</h3>
-            <p class="text-sm text-textMuted mb-8 max-w-md mx-auto leading-relaxed">Descargá mi curriculum con el resumen de mi formación, experiencia y proyectos.</p>
+            <h3 class="font-display text-2xl md:text-3xl font-semibold mb-3 tracking-tight">¿Querés ver todo en un solo
+                lugar?</h3>
+            <p class="text-sm text-textMuted mb-8 max-w-md mx-auto leading-relaxed">Descargá mi curriculum con el
+                resumen de mi formación, experiencia y proyectos.</p>
             <a href="./assets/cv-sofia-galindez.pdf" download
                 class="inline-flex items-center gap-3 gradient-bloom-btn text-white px-10 py-4 rounded-full font-semibold text-sm shadow-sm">
                 <i class="fa-solid fa-arrow-down-to-bracket"></i> Descargar Curriculum
@@ -494,17 +618,40 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 bg-surface text-center">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex items-center justify-center gap-3 mb-3 text-rose/70">
-                <span class="stitch-divider w-16"></span>
-                <span class="w-1.5 h-1.5 rounded-full bg-rose"></span>
-                <span class="stitch-divider w-16"></span>
+    <footer class="relative overflow-hidden" style="background: linear-gradient(to bottom, #ffffff, #ffcee3);">
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle, #f3b5d0 1.5px, transparent 1.5px); background-size: 28px 28px; opacity: 0.55;"></div>
+
+        <div class="relative z-10 py-10 text-center">
+            <p class="font-display font-semibold text-lg tracking-tight text-plum mb-1">Sofía Galíndez</p>
+            <p class="text-xs text-plum/60 font-medium mb-6 tracking-wide">Estudiante Técnica en Computación</p>
+
+            <!-- Iconos sociales -->
+            <div class="flex items-center justify-center gap-4 mb-7">
+                <a href="https://github.com/sofiaemma07" target="_blank"
+                    class="w-11 h-11 rounded-full bg-white border-2 border-dashed border-rose/50 flex items-center justify-center hover:scale-110 transition-all duration-200 shadow-sm">
+                    <i class="fa-brands fa-github text-base" style="color: #ec97b6;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/sof%C3%ADa-emma-gal%C3%ADndez-2393623ba/" target="_blank"
+                    class="w-11 h-11 rounded-full bg-white border-2 border-dashed border-rose/50 flex items-center justify-center hover:scale-110 transition-all duration-200 shadow-sm">
+                    <i class="fa-brands fa-linkedin text-base" style="color: #ec97b6;"></i>
+                </a>
+                <a href="mailto:semmagalindez@gmail.com"
+                    class="w-11 h-11 rounded-full bg-white border-2 border-dashed border-rose/50 flex items-center justify-center hover:scale-110 transition-all duration-200 shadow-sm">
+                    <i class="fa-solid fa-envelope text-base" style="color: #ec97b6;"></i>
+                </a>
             </div>
-            <p class="text-xs text-textMuted font-medium">Diseñado y Programado por Sofía Galíndez | © 2026</p>
+
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <span class="w-1 h-1 rounded-full bg-rose/50"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-rose/70"></span>
+                <span class="w-1 h-1 rounded-full bg-rose/50"></span>
+            </div>
+
+            <p class="text-xs text-plum/50 font-medium">Diseñado y Programado por Sofía Galíndez · © 2026</p>
         </div>
     </footer>
 
     <script src="./js/main.js"></script>
 </body>
+
 </html>

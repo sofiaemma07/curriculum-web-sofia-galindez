@@ -116,3 +116,35 @@ html {
 .animate-bounce {
     animation: bounce 1.6s infinite;
 }
+
+/* Hero */
+
+.hero-badge-line {
+    display: inline-block;
+    width: 2rem;
+    height: 2px;
+    background: #E2799F;
+    border-radius: 9999px;
+}
+
+.hero-left-bar {
+    flex-shrink: 0;
+    width: 4px;
+    height: 64px;
+    border-radius: 9999px;
+    background: linear-gradient(to bottom, #E2799F, #9B7FC7);
+    margin-top: 6px;
+}
+
+.hero-photo-wrapper {
+    position: relative;
+    width: 300px;
+    height: 380px;
+}
+
+@media (min-width: 768px) {
+    .hero-photo-wrapper {
+        width: 370px;
+        height: 450px;
+    }
+}
